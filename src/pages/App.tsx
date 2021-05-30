@@ -13,8 +13,6 @@ import Swap from './Swap'
 import Migration from './Migration'
 import { RedirectPathToSwapOnly } from './Swap/redirects'
 
-import Menu from '../components/Menu'
-
 const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
@@ -39,7 +37,6 @@ export default function App() {
     <Suspense fallback={null}>
       <HashRouter>
         <AppWrapper>
-              <Menu>
                 <BodyWrapper>
                   <Popups />
                   <Web3ReactManager>
@@ -60,7 +57,6 @@ export default function App() {
                     </Switch>
                   </Web3ReactManager>
                 </BodyWrapper>
-              </Menu>
         </AppWrapper>
       </HashRouter>
     </Suspense>
