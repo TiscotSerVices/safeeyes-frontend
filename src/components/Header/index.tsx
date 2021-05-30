@@ -14,7 +14,6 @@ import { GreyCard } from '../Card'
 import Menu from '../Menu'
 
 import { RowBetween } from '../Row'
-import Web3Status from '../Web3Status'
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -134,7 +133,6 @@ export default function Header() {
                   {userEthBalance?.toSignificant(4)} BNB
                 </BalanceText>
               ) : null}
-              <Web3Status />
             </AccountElement>
           </HeaderElement>
           <HeaderElementWrap>
