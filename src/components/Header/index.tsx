@@ -6,7 +6,6 @@ import styled from 'styled-components'
 
 import Logo from '../../assets/svg/logo.svg'
 import LogoDark from '../../assets/svg/logoDark.svg'
-import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 
@@ -110,7 +109,6 @@ const BalanceText = styled(Text)`
 
 
 export default function Header() {
-  const { account } = useActiveWeb3React()
 
   const userEthBalance = useETHBalances([account])[account]
   const [isDark] = useDarkModeManager()
