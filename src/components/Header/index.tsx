@@ -54,19 +54,6 @@ const Title = styled.a`
   }
 `
 
-const AccountElement = styled.div<{ active: boolean }>`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: ${({ theme, active }) => (!active ? theme.bg1 : theme.bg3)};
-  border-radius: 12px;
-  white-space: nowrap;
-  width: 100%;
-
-  :focus {
-    border: 1px solid blue;
-  }
-`
 
 const TestnetWrapper = styled.div`
   white-space: nowrap;
@@ -110,7 +97,6 @@ const BalanceText = styled(Text)`
 
 export default function Header() {
 
-  const userEthBalance = useETHBalances([account])[account]
   const [isDark] = useDarkModeManager()
 
   return (
@@ -125,13 +111,6 @@ export default function Header() {
         </HeaderElement>
         <HeaderControls>
           <HeaderElement>
-            <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
-              {account && userEthBalance ? (
-                <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-                  {userEthBalance?.toSignificant(4)} BNB
-                </BalanceText>
-              ) : null}
-            </AccountElement>
           </HeaderElement>
           <HeaderElementWrap>
             <Menu />
