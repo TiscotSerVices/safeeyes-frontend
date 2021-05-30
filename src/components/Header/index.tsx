@@ -110,8 +110,7 @@ export default function Header() {
           </Title>
         </HeaderElement>
         <HeaderControls>
-          <HeaderElement>
-          </HeaderElement>
+          <HeaderElement />
           <HeaderElementWrap>
             <Menu />
           </HeaderElementWrap>
