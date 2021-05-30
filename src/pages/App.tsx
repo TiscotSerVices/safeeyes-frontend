@@ -21,6 +21,12 @@ const AppWrapper = styled.div`
   overflow-x: hidden;
 `
 
+const HeaderWrapper = styled.div`
+  ${({ theme }) => theme.flexRowNoWrap}
+  width: 100%;
+  justify-content: space-between;
+`
+
 const BodyWrapper = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
