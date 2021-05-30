@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import Popups from '../components/Popups'
+import Header from '../components/Header'
 import Web3ReactManager from '../components/Web3ReactManager'
 import { RedirectDuplicateTokenIds, RedirectOldAddLiquidityPathStructure } from './AddLiquidity/redirects'
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
@@ -37,6 +38,9 @@ export default function App() {
     <Suspense fallback={null}>
       <HashRouter>
         <AppWrapper>
+          <HeaderWrapper>
+            <Header />
+          </HeaderWrapper>
                 <BodyWrapper>
                   <Popups />
                   <Web3ReactManager>
